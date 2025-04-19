@@ -1,7 +1,9 @@
 <template>
   <header class="header">
     <div class="header__left">
-      <div class="logo"><NuxtImg src="/images/logo.png" /></div>
+      <div class="logo">
+        <img src="~/assets/images/logo.png" alt="logo" />
+      </div>
     </div>
     <div class="header__right">
       <nav>
@@ -17,13 +19,13 @@
         </ul>
       </nav>
       <div class="language">
-        <NuxtImg
-          src="/icons/flag-vi.svg"
+        <img
+          src="~/assets/icons/flag-vi.svg"
           :class="{ active: isLang === 'VI' }"
           @click="isLang = 'VI'"
         />
-        <NuxtImg
-          src="/icons/flag-en.svg"
+        <img
+          src="~/assets/icons/flag-en.svg"
           :class="{ active: isLang === 'EN' }"
           @click="isLang = 'EN'"
         />
@@ -63,6 +65,15 @@ const isLang = ref<"VI" | "EN">("VI");
 
   &__left {
     flex-shrink: 0;
+
+    .logo {
+      max-width: 15rem;
+      height: 7.5rem;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 
   &__right {
@@ -95,6 +106,8 @@ const isLang = ref<"VI" | "EN">("VI");
       cursor: pointer;
       img {
         opacity: 0.6;
+        width: 3rem;
+        height: 3rem;
         &.active {
           opacity: 1;
         }

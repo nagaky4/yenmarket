@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <NuxtImg src="/images/banner.jpg" class="banner" />
+    <img class="banner" src="~/assets/images/banner.jpg" alt="logo" />
   </div>
 </template>
 
